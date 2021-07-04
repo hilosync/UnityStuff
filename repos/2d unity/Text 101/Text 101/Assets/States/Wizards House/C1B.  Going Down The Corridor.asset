@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fd2dfd5fafdeb48b3b294db4f775fb, type: 3}
+  m_Name: C1B.  Going Down The Corridor
+  m_EditorClassIdentifier: 
+  storyText: "You decide to head for the corridor to investigate the strange sound,
+    and to see if anyone is there.\r\nAs you walk towards the corridor, you barely
+    make out a strange shadow receding backwards, but you decide to press on. \r\n\r\n\r\n1.
+    Continue..."
+  nextStates:
+  - {fileID: 11400000, guid: e7775e2e7122802429f22602e4834b79, type: 2}

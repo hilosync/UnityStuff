@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fd2dfd5fafdeb48b3b294db4f775fb, type: 3}
+  m_Name: D1. The Pocket Dimension Pt II
+  m_EditorClassIdentifier: 
+  storyText: 'You use the wand, trying to channel what little magic you have to create
+    a fireball.
+
+
+    To your surprise, you end up launching a huge ball of flames
+    towards the Merlucent, which  ends up hitting the monster square on it''s back.
+
+
+    It
+    squirms around on fire for a short while before it stops moving.
+
+
+    You head
+    over to the blob of jelly and hear a strange noise
+
+
+    1. Continue...'
+  nextStates:
+  - {fileID: 11400000, guid: b546b60508f946d47b1e085752091ee9, type: 2}

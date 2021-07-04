@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fd2dfd5fafdeb48b3b294db4f775fb, type: 3}
+  m_Name: D1. The Pocket Dimension Pt I
+  m_EditorClassIdentifier: 
+  storyText: 'As you start reciting the spell, you are surrounded in a flash of light,
+    when you finish, you see yourself in the same room but everything is covered
+    in slime.
+
+
+    You also see the Merlucent in the room, it is much larger and
+    more intimidating than the picture in the book. It looks to be holding a vaguely
+    human-shaped blob of jelly
+
+
+    What do you do?
+
+
+    1. Call out to the Merlucent
+
+
+
+    2.
+    Use the wand to cast a fire spell'
+  nextStates:
+  - {fileID: 11400000, guid: 82afce13af6297348bf236b4c1a37378, type: 2}
+  - {fileID: 11400000, guid: 98f7d204bb9a2fe45b572b69ee2f2c75, type: 2}

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fd2dfd5fafdeb48b3b294db4f775fb, type: 3}
+  m_Name: D1B. The Pocket Dimension Pt II - End
+  m_EditorClassIdentifier: 
+  storyText: 'You call out to the monster and get its attention, unfortunately for
+    you, it is extremely aggressive and attacks you immediately.
+
+    
+
+    
+
+    
+
+    You
+    dodge the first shot of slime it throws out, but the second catches your legs
+    and immobilizes you.
+
+    
+
+    
+
+    
+
+    As you get hit with more blobs
+    of slime, they slowly encapsulate you until they block your vision and you slowly
+    lose consciesness.
+
+    
+
+    
+
+    
+
+    The End
+
+
+    Would you like to
+    play again?
+
+
+    1. Yes
+
+    2. No'
+  nextStates:
+  - {fileID: 11400000, guid: b78ca7825fa2233479ac5b5ad66b60ee, type: 2}
+  - {fileID: 11400000, guid: c7458a411ad063741894c987fdd1d6ed, type: 2}

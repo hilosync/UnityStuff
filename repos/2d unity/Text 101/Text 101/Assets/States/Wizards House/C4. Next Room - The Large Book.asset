@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fd2dfd5fafdeb48b3b294db4f775fb, type: 3}
+  m_Name: C4. Next Room - The Large Book
+  m_EditorClassIdentifier: 
+  storyText: 'You decide to have a look at the open book, it looks like a compendium
+    of rare and dangerous monsters. The page it''s currently on is about a monster
+    called the Merlucent, which is a jellyfish-like humanoid that has the ability
+    to transport prey and itself to a pocket dimension.
+
+    
+
+    The pocket dimension
+    occupies the same physical space as the material world, and it can be easily
+    accessed with a spell if there is a Merlucent nearby.
+
+    
+
+    The book also
+    mentions that they like to hunt creatures with large amounts of magic
+
+    
+
+    You
+    feel as if someone is watching you
+
+    
+
+    What do you do?
+
+    
+
+    
+
+    
+
+    1.
+    Try to cast the spell in the book'
+  nextStates:
+  - {fileID: 11400000, guid: 755c250ffc06f9f4b81bcfd2ae92419f, type: 2}

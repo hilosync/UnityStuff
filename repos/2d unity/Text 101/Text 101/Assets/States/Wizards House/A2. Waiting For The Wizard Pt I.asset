@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fd2dfd5fafdeb48b3b294db4f775fb, type: 3}
+  m_Name: A2. Waiting For The Wizard Pt I
+  m_EditorClassIdentifier: 
+  storyText: 'You think to yourself "Of course I will wait for the wizard to come
+    back, I wouldn''t want to make him mad on my first day".
+
+    
+
+    You sit
+    tightly waiting for the wizard to come back.
+
+    
+
+    About 5 minutes pass
+    before you hear muffled screams coming from the corridor
+
+    
+
+    What do
+    you do?
+
+    
+
+    
+
+    
+
+    1. Wait for the wizard to return, you''re
+    sure you are just imagining things
+
+    
+
+    2. Go down the corridor'
+  nextStates:
+  - {fileID: 11400000, guid: 42daf17ef00892945b389d90b89ef26c, type: 2}
+  - {fileID: 11400000, guid: b7bbbe450ffe4bd4989639756de3bbc4, type: 2}

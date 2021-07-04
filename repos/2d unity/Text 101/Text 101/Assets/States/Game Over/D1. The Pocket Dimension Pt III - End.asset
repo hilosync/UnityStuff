@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fd2dfd5fafdeb48b3b294db4f775fb, type: 3}
+  m_Name: D1. The Pocket Dimension Pt III - End
+  m_EditorClassIdentifier: 
+  storyText: "You start to dig the slime out, there's a lot of it but you quickly
+    start to notice parts of a human.\r It's the wizard, thankfully he is alive but
+    unconscious.\r You shake him awake, and with a gasped breath he yells out \"WHAT
+    HAPPENED??!?!?\"\r\n\r\n\r\n\r\nYou tell him that the Merlucent he had in his
+    cage must have somehow escaped and taken him by surprise.  And that you defeated
+    it using this wand you found.\r The wizard looks at you, in shock, \"If you did
+    all that as an apprentice, then you must be one of the most promising wizards
+    in history\" he says.\r\n\r\n\r\n\r\nYou both leave the pocket dimension, and
+    he tells you to go home for the rest of the day, and that you'll start doing
+    more advanced magic from tomorrow onwards \r\n\r\n\r\n\r\nThe End\n\nPress 1
+    to return to title screen\n"
+  nextStates:
+  - {fileID: 11400000, guid: c7458a411ad063741894c987fdd1d6ed, type: 2}

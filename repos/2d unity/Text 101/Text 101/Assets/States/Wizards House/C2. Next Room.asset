@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fd2dfd5fafdeb48b3b294db4f775fb, type: 3}
+  m_Name: C2. Next Room
+  m_EditorClassIdentifier: 
+  storyText: "You exit the corridor and enter a large circular room with an empty
+    cage in the middle. The cage is open and empty. You do not see the wizard anywhere.
+    \r\n\r\nThe walls are lined with bookshelves and storage units, filled with various
+    magical items and wizard equipment like wands, staves and robes.\r\n\r\nThere
+    is also a desk with a very large book open\r\n\r\nYou feel as if someone is watching
+    you\r\n\r\nWhat do you do?\r\n\r\n\r\n\r\n1. Take a look at the magical equipment\r\n\r\n2.
+    Take a look at the large open book"
+  nextStates:
+  - {fileID: 11400000, guid: e772a7b2a07d5fd40b4bd540b1476d4e, type: 2}
+  - {fileID: 11400000, guid: 4488715676f86e74387df8704abf9c53, type: 2}
