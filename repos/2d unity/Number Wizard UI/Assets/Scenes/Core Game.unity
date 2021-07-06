@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Success
+  m_text: Correct
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 307359efcaa84b14f9cc17ad4c821730, type: 2}
   m_sharedMaterial: {fileID: -6030523289619622655, guid: 307359efcaa84b14f9cc17ad4c821730,
@@ -908,7 +908,7 @@ GameObject:
   - component: {fileID: 554980304}
   - component: {fileID: 554980303}
   m_Layer: 5
-  m_Name: Guess Text
+  m_Name: Guess Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1403,7 +1403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 416, y: 82.276}
+  m_AnchoredPosition: {x: 416.02, y: 110}
   m_SizeDelta: {x: 392.46118, y: 169.91016}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1691461637
@@ -1579,8 +1579,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 170176333}
-        m_MethodName: LoadNextScene
+      - m_Target: {fileID: 2095460311}
+        m_MethodName: OnPressHigher
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1724,6 +1724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max: 1000
   min: 1
+  guessText: {fileID: 387086240}
 --- !u!4 &2095460312
 Transform:
   m_ObjectHideFlags: 0
@@ -1820,8 +1821,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 170176333}
-        m_MethodName: LoadNextScene
+      - m_Target: {fileID: 2095460311}
+        m_MethodName: OnPressLower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
