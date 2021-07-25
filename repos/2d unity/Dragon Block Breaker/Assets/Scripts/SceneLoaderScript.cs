@@ -6,6 +6,7 @@ using System.Collections;
 
 public class SceneLoaderScript : MonoBehaviour
 {
+    GameSession reset;
     public void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -14,6 +15,8 @@ public class SceneLoaderScript : MonoBehaviour
 
     public void LoadStartScene()
     {
+        reset = FindObjectOfType<GameSession>();
+        reset.ResetScore();
         SceneManager.LoadScene(0);
     }
 
