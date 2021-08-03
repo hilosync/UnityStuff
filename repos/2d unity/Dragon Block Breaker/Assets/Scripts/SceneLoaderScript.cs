@@ -16,7 +16,6 @@ public class SceneLoaderScript : MonoBehaviour
     public void LoadStartScene()
     {
         reset = FindObjectOfType<GameSession>();
-        reset.ResetScore();
         SceneManager.LoadScene(0);
     }
 

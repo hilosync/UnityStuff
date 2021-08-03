@@ -134,18 +134,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4765bccbe16d004d802e59088847a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyToPress: 32
+  activatePowerButton: 102
+  ballTouchingPaddle: 0
   paddle1: {fileID: 0}
   xPush: 1
   yPush: 7
   ballSounds:
-  - {fileID: 8300000, guid: 591d4b25a6795b041aee445628c640a7, type: 3}
-  - {fileID: 8300000, guid: 0bd5d84670d863d47bedc4d62ef84c72, type: 3}
-  - {fileID: 8300000, guid: 59aa80db5b16bb14a808b3cffb1b2735, type: 3}
-  - {fileID: 8300000, guid: ca66d6bdb9fec5442b84160ba6f842e7, type: 3}
+  - {fileID: 8300000, guid: 75d3ab7593e67bb4698a20f9b7ab069d, type: 3}
   randomFactor: 1
   speedUpTimeLag: 0.2
   speedUpFactor: 1.02
   maxSpeedFactor: 1.5
+  powerIncrement: 1
+  hasStarted: 0
+  isHit: 0
+  sliderScript: {fileID: 0}
 --- !u!82 &368004922
 AudioSource:
   m_ObjectHideFlags: 0
@@ -158,7 +162,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -9,13 +9,17 @@ public class Block : MonoBehaviour
     Level level;
     GameSession points;
 
+
     [SerializeField] Color[] hitColour;
     //[SerializeField] int maxHits;
     [SerializeField] AudioClip breakSound;
     [SerializeField] GameObject blockSparklesVFX;
     [SerializeField] int timesHit;
+
+    PowerBar powerBarScript;
     private void Start()
     {
+        powerBarScript = FindObjectOfType<PowerBar>();
         level = FindObjectOfType<Level>();
 
         if (tag == "Breakable")
@@ -30,7 +34,14 @@ public class Block : MonoBehaviour
     {
         if (tag == "Breakable")
         {
-            timesHit++;
+            if(powerBarScript.poweredUp)
+            {
+                timesHit += 2;
+            }
+            else
+            {
+                timesHit++;
+            }
             int maxHits = hitColour.Length + 1;
             if (timesHit >= maxHits)
                 DestroyBlock();
@@ -39,16 +50,16 @@ public class Block : MonoBehaviour
         }
     }
 
+
     private void showNextHitSprite()
     {
-        //var blockRenderer = GetComponent<Renderer>();
+
         int colourIndex = timesHit - 1;
         if(hitColour[colourIndex] != null)
             GetComponent<SpriteRenderer>().color = hitColour[colourIndex];
         else
             Debug.LogError("Block colour is missing from colour array" + gameObject.name);
         
-        //blockRenderer.material.SetColor("_Color",hitColour[colourIndex]);
 
     }
 
@@ -57,7 +68,6 @@ public class Block : MonoBehaviour
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
         Destroy(gameObject);
         level.BlockDestroyed();
-        points.AddToScore();
         TriggerSparklesVFX();
     }
     private void TriggerSparklesVFX()

@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
-
+    [SerializeField] KeyCode keyToPress;
+    [SerializeField] KeyCode activatePowerButton;
+    [SerializeField] bool ballTouchingPaddle;
     [SerializeField] Paddle paddle1;
     [SerializeField] float xPush = 2f;
     [SerializeField] float yPush = 12f;
@@ -16,13 +19,24 @@ public class Ball : MonoBehaviour
 
     [SerializeField] float maxSpeedFactor = 2f;
 
+    [SerializeField] float powerIncrement = 0.2f;
+
     Vector2 paddleToBallVector;
     public bool hasStarted = false;
 
+    public bool isHit = false;
+
+    GameObject fireVFX;
+
+    public PowerBar sliderScript;
 
     AudioSource myAudioSource;
     Rigidbody2D myRigidBody;
     // Start is called before the first frame update
+    void Awake() 
+    {
+        fireVFX = GameObject.Find("fx_fire_a");
+    }
     void Start()
     {
         paddleToBallVector = transform.position -paddle1.transform.position;
@@ -31,15 +45,29 @@ public class Ball : MonoBehaviour
 
         myRigidBody = GetComponent<Rigidbody2D>();
 
+        sliderScript = FindObjectOfType<PowerBar>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        fireVFX.transform.position = transform.position;
         if (!hasStarted)
         {
             LockBallToPaddle();
             LaunchOnMouseClick();
+        }
+        else
+        {
+            PowerMode();
+            if(Input.GetKeyDown(keyToPress))
+            {
+                if(ballTouchingPaddle)
+                {
+                    sliderScript.PowerProgress(powerIncrement);
+                }
+            }
         }
     }
 
@@ -74,11 +102,39 @@ public class Ball : MonoBehaviour
             StartCoroutine(Waiter());
             if(myRigidBody.velocity.magnitude <= Mathf.Sqrt(Mathf.Pow(maxSpeedFactor*xPush,2) + Mathf.Pow(maxSpeedFactor*yPush,2)))
                 myRigidBody.velocity = speedUp;
+
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.tag == "Activator")
+        {
+            ballTouchingPaddle = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) 
+    {
+        if(other.tag == "Activator")
+        {
+            ballTouchingPaddle = false;
         }
     }
 
     IEnumerator Waiter()
     {
         yield return new WaitForSeconds(speedUpTimeLag);
+    }
+
+    public void PowerMode()
+    {
+        if(Input.GetKeyDown(activatePowerButton))
+        {
+            if(sliderScript.slider.value == 1f)
+            {
+                sliderScript.PowerActivated();
+                //TODO - active special powers!!!
+            }
+        }
     }
 }
