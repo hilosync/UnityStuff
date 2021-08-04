@@ -32,6 +32,7 @@ public class Block : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        powerBarScript = FindObjectOfType<PowerBar>();
         if (tag == "Breakable")
         {
             if(powerBarScript.poweredUp)

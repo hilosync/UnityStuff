@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class GifPlayer : MonoBehaviour
 {
+    [SerializeField] VideoClip videoClip;
     void Start()
     {
         // Will attach a VideoPlayer to the main camera.
@@ -26,7 +28,7 @@ public class GifPlayer : MonoBehaviour
 
         // Set the video to play. URL supports local absolute or relative paths.
         // Here, using absolute.
-        videoPlayer.url = "C:/Users/niksr/Desktop/UnityStuff/repos/2d unity/Dragon Block Breaker/Assets/Materials/FlamesGif.mov";
+        videoPlayer.clip = videoClip;
 
         // Restart from beginning when done.
         videoPlayer.isLooping = true;

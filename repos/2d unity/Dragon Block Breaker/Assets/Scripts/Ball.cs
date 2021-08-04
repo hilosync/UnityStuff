@@ -65,6 +65,7 @@ public class Ball : MonoBehaviour
             {
                 if(ballTouchingPaddle)
                 {
+                    sliderScript = FindObjectOfType<PowerBar>();
                     sliderScript.PowerProgress(powerIncrement);
                 }
             }
@@ -100,7 +101,7 @@ public class Ball : MonoBehaviour
             myRigidBody.velocity += velocityTweak;
             Vector2 speedUp = new Vector2(myRigidBody.velocity.x * speedUpFactor,myRigidBody.velocity.y * speedUpFactor);
             StartCoroutine(Waiter());
-            if(myRigidBody.velocity.magnitude <= Mathf.Sqrt(Mathf.Pow(maxSpeedFactor*xPush,2) + Mathf.Pow(maxSpeedFactor*yPush,2)))
+            if(myRigidBody.velocity.magnitude <= (Mathf.Sqrt(Mathf.Pow(maxSpeedFactor*xPush,2) + Mathf.Pow(maxSpeedFactor*yPush,2))))
                 myRigidBody.velocity = speedUp;
 
         }
@@ -133,7 +134,6 @@ public class Ball : MonoBehaviour
             if(sliderScript.slider.value == 1f)
             {
                 sliderScript.PowerActivated();
-                //TODO - active special powers!!!
             }
         }
     }

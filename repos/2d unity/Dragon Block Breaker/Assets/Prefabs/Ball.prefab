@@ -144,9 +144,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 75d3ab7593e67bb4698a20f9b7ab069d, type: 3}
   randomFactor: 1
   speedUpTimeLag: 0.2
-  speedUpFactor: 1.02
-  maxSpeedFactor: 1.5
-  powerIncrement: 1
+  speedUpFactor: 1.05
+  maxSpeedFactor: 1.2
+  powerIncrement: 0.2
   hasStarted: 0
   isHit: 0
   sliderScript: {fileID: 0}
